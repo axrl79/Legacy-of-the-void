@@ -3682,6 +3682,7 @@ GameObject:
   - component: {fileID: 1351048930}
   - component: {fileID: 1351048932}
   - component: {fileID: 1351048931}
+  - component: {fileID: 1351048933}
   m_Layer: 0
   m_Name: Arma
   m_TagString: Untagged
@@ -3805,6 +3806,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1351048933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351048929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea08319c21b5c74babb40722d0dc284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 10
+  tiempoVida: 3
 --- !u!1 &1467071296
 GameObject:
   m_ObjectHideFlags: 0
@@ -4161,6 +4176,7 @@ GameObject:
   - component: {fileID: 2124936443}
   - component: {fileID: 2124936445}
   - component: {fileID: 2124936444}
+  - component: {fileID: 2124936446}
   m_Layer: 0
   m_Name: Arma
   m_TagString: Untagged
@@ -4284,6 +4300,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2124936446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124936442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea08319c21b5c74babb40722d0dc284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 10
+  tiempoVida: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
