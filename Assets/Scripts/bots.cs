@@ -10,6 +10,8 @@ public class bots : MonoBehaviour
     [SerializeField] private float rangoVision = 10f;
     [SerializeField] private float tiempoEntreDisparos = 1.5f;
 
+    [SerializeField] private barravida barraVida; // ← se agregó la referencia a la barra de vida
+
     private Rigidbody2D rig;
     private Animator anim;
     private SpriteRenderer spriteRenderer;
@@ -22,6 +24,11 @@ public class bots : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         jugador = GameObject.FindGameObjectWithTag("Player").transform;
+
+        if (barraVida != null)
+        {
+            barraVida.InicializarVidaMaxima(vida); // ← Inicializa la barra con la vida máxima del bot
+        }
     }
 
     private void FixedUpdate()
@@ -66,6 +73,12 @@ public class bots : MonoBehaviour
     public void RecibirDaño(int daño)
     {
         vida -= daño;
+
+        if (barraVida != null)
+        {
+            barraVida.ActualizarBarraVida(vida); // ← Actualiza visualmente la barra
+        }
+
         if (vida <= 0)
         {
             Morir();

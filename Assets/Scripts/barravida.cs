@@ -10,12 +10,30 @@ public class barravida : MonoBehaviour
 
     void Start()
     {
-        personaje = GameObject.Find("personaje").GetComponent<Personaje>(); 
-        vidaMaxima = personaje.vida;  
+        // Intenta obtener la vida del personaje si existe
+        GameObject objPersonaje = GameObject.Find("personaje");
+        if (objPersonaje != null)
+        {
+            personaje = objPersonaje.GetComponent<Personaje>();
+            if (personaje != null)
+            {
+                vidaMaxima = personaje.vida;
+            }
+        }
     }
 
     public void ActualizarBarraVida(int vidaActual)
     {
-        rellenoBarraVida.fillAmount = (float)vidaActual / vidaMaxima;
+        if (rellenoBarraVida != null && vidaMaxima > 0)
+        {
+            rellenoBarraVida.fillAmount = (float)vidaActual / vidaMaxima;
+        }
+    }
+
+    // Método opcional para configurar vida desde otro script (por ejemplo, en enemigos)
+    public void InicializarVidaMaxima(int vida)
+    {
+        vidaMaxima = vida;
+        ActualizarBarraVida(vida); // Para que se vea llena al principio
     }
 }
