@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b96408c7f65569f4a9364652fc71324f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 218050
+  packageName: 2D Simple UI Pack
+  packageVersion: 1.0
+  assetPath: Assets/OArielG/2DSimpleUIPack/Examples/Animations/BlackOptionsButton/BlackOptionsButton.controller
+  uploadId: 493490
