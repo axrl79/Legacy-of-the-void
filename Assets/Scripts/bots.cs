@@ -48,7 +48,6 @@ public class bots : MonoBehaviour
 
         anim.SetFloat("Camina", rig.linearVelocity.magnitude);
 
-        // Voltear sprite
         spriteRenderer.flipX = direccion.x < 0;
     }
 
@@ -75,7 +74,6 @@ public class bots : MonoBehaviour
 
     private void Morir()
     {
-        // Puedes poner animación, partículas, sonido aquí
         Destroy(gameObject);
     }
 }
